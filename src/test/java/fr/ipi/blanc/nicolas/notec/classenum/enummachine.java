@@ -5,7 +5,8 @@ public enum enummachine {
 		+ "Bienvenue au Casino de Céladopole !\r\n"
 		+ "°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`"),
     NBJETON("Jetons possédés : "),
-    RESTART("Combien de jetons ? (1, 2 ou 3) : ");
+    RESTART("Combien de jetons ? (1, 2 ou 3) : "),
+    GAIN("Gains : ");
     private final String description;
     private enummachine(String description) {
         this.description = description;
