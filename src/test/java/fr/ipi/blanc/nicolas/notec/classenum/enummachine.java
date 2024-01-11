@@ -6,6 +6,7 @@ public enum enummachine {
 		+ "°º¤ø,¸¸,ø¤º°`°º¤ø,¸,ø¤°º¤ø,¸¸,ø¤º°`"),
     NBJETON("Jetons possédés : "),
     RESTART("Combien de jetons ? (1, 2 ou 3) : "),
+    GAMEOVER("Vous avez perdu"),
     GAIN("Gains : ");
     private final String description;
     private enummachine(String description) {

@@ -25,7 +25,11 @@ public class machine {
 	}
 	private void graphique() {
 		affiche();
-		select();
+		if(nbjeton==0) {
+			System.out.println(enummachine.GAMEOVER.getDescription());
+		}else {
+			select();
+		}
 	}
     private void select() {
     	System.out.println(enummachine.GAIN.getDescription()+mygain);
@@ -34,9 +38,17 @@ public class machine {
 		BufferedReader reader = new BufferedReader(
         new InputStreamReader(System.in));
 		try {
-			String name = reader.readLine();
+			boolean resselect = true;
+			int nb=0;
+			while(resselect) {
+				String name = reader.readLine();
+				mygain=0;
+				nb = Integer.parseInt(name);
+				if(nb<=nbjeton && 0<nb && nb<=3) {
+					resselect = false;
+				}
+			}
 			chargematrice();
-			int nb = Integer.parseInt(name);
 			nbjeton -= nb;
 	        if (System.console() == null) {
 	        	try {
@@ -91,7 +103,7 @@ public class machine {
 	}
 	private void affiche() {
 		for (List<String> list : matrice33){
-			String ligne = StringUtils.join(list," | ");
+			String ligne = StringUtils.join(list,"|");
 			System.out.println(ligne);
 		}
 		
