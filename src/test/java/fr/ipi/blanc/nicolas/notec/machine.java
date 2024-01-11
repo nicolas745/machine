@@ -89,6 +89,7 @@ public class machine {
     			}
     		}
     	}
+    	System.out.println("   ");
     	System.out.print("\033[7;1H");
     }
 	public static List<List<String>> inverserMatrice(List<List<String>> matrice) {
@@ -154,7 +155,21 @@ public class machine {
 					String selectcase = casename(matrice33.get(1).get(0));
 					mygain +=listgain.get(selectcase).intValue();
 				}
+				if(checkligne(2)) {
+					String selectcase = casename(matrice33.get(2).get(0));
+					mygain +=listgain.get(selectcase).intValue();
+				}
+				break;
+			case 3:
 				if(checkligne(0)) {
+					String selectcase = casename(matrice33.get(0).get(0));
+					mygain +=listgain.get(selectcase).intValue();
+				}
+				if(checkligne(1)) {
+					String selectcase = casename(matrice33.get(1).get(0));
+					mygain +=listgain.get(selectcase).intValue();
+				}
+				if(checkligne(2)) {
 					String selectcase = casename(matrice33.get(2).get(0));
 					mygain +=listgain.get(selectcase).intValue();
 				}
@@ -166,8 +181,6 @@ public class machine {
 					String selectcase = casename(matrice33.get(1).get(1));
 					mygain +=listgain.get(selectcase).intValue();
 				}
-				break;
-			case 3:
 				break;
 			default:
 				break;
